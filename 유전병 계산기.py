@@ -16,7 +16,7 @@ def get_valid_input(prompt, validation_func, error_message): #유효한 사용�
 
 def get_valid_genotype(prompt, expected_length, allowed_chars=None): #특정 길이의 유전자형을 입력받고 검증
     #param propt : 사용자에게 보여줄 메세지
-    #param expected_lenght : 기대한는 유전자형 길이
+    #param expected_lenght : 기대하는 유전자형 길이
     #param alloved_chars : 유전자형에 해당되는 문자 집합
 
     def validate(x):
@@ -256,7 +256,7 @@ def input_phenotype_info(): #형질 개수, 각 형질별 대립유전자 수, �
 
 def input_parents_phenotypes(traits): #각 형질별로 엄마, 아빠 유전자형 리스트로 반환
     mom_genes, dad_genes = [], []
-    for idx, trait in enumerate(traits, start=1): #대소무자 구별해야함
+    for idx, trait in enumerate(traits, start=1): #대소문자 구별해야함
 
         # 유전자형 입력 시 허용되는 대립유전자 목록을 생성 (대소문자 구분 없이 비교하기 위해)
         allowed_alleles_for_validation = trait['alleles']
